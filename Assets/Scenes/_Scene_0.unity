@@ -403,9 +403,10 @@ GameObject:
   m_Component:
   - component: {fileID: 934653100}
   - component: {fileID: 934653099}
+  - component: {fileID: 934653101}
   m_Layer: 0
   m_Name: Slingshot
-  m_TagString: Untagged
+  m_TagString: Slingshot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -437,9 +438,28 @@ Transform:
   - {fileID: 2106015344}
   - {fileID: 1814984957}
   - {fileID: 1597779567}
+  - {fileID: 1047890169}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -15, z: 0}
+--- !u!114 &934653101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934653098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c626c4e8f63732b49b0f5ee16e52bc8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabProjectile: {fileID: 3476033573775179412, guid: 72598da49a117714381f00c50dfbbe9c, type: 3}
+  velocityMult: 8
+  launchPoint: {fileID: 1047890168}
+  launchPos: {x: 0, y: 0, z: 0}
+  projectile: {fileID: 0}
+  aimingMode: 0
 --- !u!1 &1047890168
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,13 +469,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1047890169}
+  - component: {fileID: 1047890170}
   m_Layer: 0
   m_Name: LaunchPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1047890169
 Transform:
   m_ObjectHideFlags: 0
@@ -467,9 +488,21 @@ Transform:
   m_LocalPosition: {x: 0, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 934653100}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 15, z: 0}
+--- !u!122 &1047890170
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047890168}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4290756543
+  m_Size: 3
 --- !u!1 &1597779566
 GameObject:
   m_ObjectHideFlags: 0
